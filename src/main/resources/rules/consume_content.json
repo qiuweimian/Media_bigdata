@@ -1,0 +1,126 @@
+{
+  "消费内容": [
+    {
+      "label": "直播",
+      "rules": "fee_code=\"0J\" or fee_code=\"0B\" or fee_code=\"0Y\""
+    },
+    {
+      "label":"应用",
+      "rules":"fee_code=\"0X\""
+    },{
+      "label":"付费频道",
+      "rules":"fee_code=\"0T\""
+    },
+    {
+      "label":"宽带",
+      "rules":"fee_code=\"0W\" or fee_code=\"0L\" or fee_code=\"0Z\" or fee_code=\"0K\""
+    },
+    {
+      "label":"点播",
+      "rules":"fee_code=\"0D\""
+    },
+    {
+      "label":"回看",
+      "rules":"fee_code=\"0H\""
+    },
+    {
+      "label":"有线电视收视费",
+      "rules":"fee_code=\"0U\""
+    }
+  ],
+  "电视消费水平":[
+    {
+      "label":"电视超低消费",
+      "rules":"fee_per_month>-26.5 and fee_per_month<26.5",
+      "comment":"注释，fee_per_month代近三个月的月平均消费,单位元"
+    },
+    {
+      "label":"电视低消费",
+      "rules":"fee_per_month>=26.5 and fee_per_month<46.5"
+    },
+    {
+      "label":"电视中等消费",
+      "rules":"fee_per_month>=46.5 and fee_per_month<66.5"
+    },
+    {
+      "label":"电视高消费",
+      "rules":"66.5<=fee_per_month"
+    }
+  ],
+  "宽带消费水平":[
+    {
+      "label":"宽带低消费",
+      "rules":"fee_per_month<=20",
+      "comment":"注释，fee_per_month代近三个月的月平均消费，单位元"
+    },
+    {
+      "label":"宽带中消费",
+      "rules":"fee_per_month>20 and fee_per_month<=50"
+    },
+    {
+      "label":"宽带高消费",
+      "rules":"fee_per_month>50"
+    }
+  ],
+  "宽带产品带宽":[
+    {
+      "label":"prodname",
+      "rules":"prodname=prodname",
+      "comment":"直接贴prodname的值"
+    }
+  ],
+  "销售品名称":[
+    {
+      "label":"offername",
+      "rules":"offername=offername",
+      "comment":"直接贴offername的值"
+    }
+  ],
+  "业务品牌":[
+    {
+      "label":"互动电视",
+      "rules":"sm_name='互动电视'"
+    },
+    {
+      "label":"数字电视",
+      "rules":"sm_name='数字电视'"
+    },
+    {
+      "label":"甜果电视",
+      "rules":"sm_name='甜果电视'"
+    },
+    {
+      "label":"珠江宽频",
+      "rules":"sm_name='珠江宽频'"
+    }
+  ],
+  "电视入网程度":[
+    {
+      "label":"老用户",
+      "rules":"T>6",
+      "comment":"注释，T为当前时间减去开户时间（单位：年）"
+    },
+    {
+      "label":"中等用户",
+      "rules":"T>3 and T<=6"
+    },
+    {
+      "label":"新用户",
+      "rules":"T<=3"
+    }
+  ],
+  "宽带入网程度":[
+    {
+      "label":"老用户",
+      "rules":"T>4",
+      "comment":"注释，T为当前时间减去开户时间（单位：年）"
+    },{
+      "label":"中等用户",
+      "rules":"T>2 and T<=4"
+    },
+    {
+      "label":"新用户",
+      "rules":"T<=2"
+    }
+  ]
+}
